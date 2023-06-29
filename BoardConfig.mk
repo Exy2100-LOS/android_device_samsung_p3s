@@ -17,12 +17,19 @@
 include device/samsung/universal2100-common/BoardConfigCommon.mk
 
 # Inherit from the proprietary configuration
-include vendor/samsung/o1s/BoardConfigVendor.mk
+include vendor/samsung/p3s/BoardConfigVendor.mk
 
-DEVICE_PATH := device/samsung/o1s
+DEVICE_PATH := device/samsung/p3s
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 515
+
+# Kernel
+TARGET_KERNEL_CONFIG := exynos2100-p3sxxx_defconfig
+
+# Kernel modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
