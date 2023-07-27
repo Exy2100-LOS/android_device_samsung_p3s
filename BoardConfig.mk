@@ -28,6 +28,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 TARGET_SCREEN_DENSITY := 515
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/p3s
 TARGET_KERNEL_CONFIG := exynos2100-p3sxxx_defconfig
 
 # Kernel modules
