@@ -26,14 +26,16 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 3200
 TARGET_SCREEN_WIDTH := 1440
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common arrow stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+ARROW_GAPPS := true
+
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_p3s
+PRODUCT_NAME := arrow_p3s
 PRODUCT_DEVICE := p3s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G998B
