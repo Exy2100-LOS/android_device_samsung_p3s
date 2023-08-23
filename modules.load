@@ -269,3 +269,4 @@ snd-soc-samsung-abox.ko
 snd-soc-samsung-vts-mailbox.ko
 snd-soc-samsung-vts.ko
 unbound_prince.ko
+input_booster_lkm.ko
